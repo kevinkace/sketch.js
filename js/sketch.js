@@ -129,7 +129,7 @@
     var object = {};
 
     for ( var key in target ) {
-      
+
       if ( key === 'webkitMovementX' || key === 'webkitMovementY' )
         continue;
 
@@ -250,7 +250,7 @@
           if ( context.retina ) {
 
             context.save();
-            
+
             if (context.autoclear) {
               context.scale( ratio, ratio );
             }
@@ -536,7 +536,7 @@
 
       options = extend( options || {}, defaults );
 
-      if ( options.globals ) Sketch.install( self );
+      if ( options.globals ) Sketch.install( typeof options.globals === "boolean" ? self : options.global );
 
       element = options.element = options.element || doc.createElement( options.type === DOM ? 'div' : 'canvas' );
 
