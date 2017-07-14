@@ -492,6 +492,7 @@
 
     install: function( context ) {
 
+      debugger;
       if ( !context[ HAS_SKETCH ] ) {
 
         for ( var i = 0; i < MATH_PROPS.length; i++ )
@@ -536,7 +537,8 @@
 
       options = extend( options || {}, defaults );
 
-      if ( options.globals ) Sketch.install( typeof options.globals === "boolean" ? self : options.global );
+      debugger;
+      if ( options.globals ) Sketch.install( typeof options.globals === "boolean" ? self : options.globals );
 
       element = options.element = options.element || doc.createElement( options.type === DOM ? 'div' : 'canvas' );
 
